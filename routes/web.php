@@ -26,4 +26,6 @@ Route::get('/allcourses', 'Admin\CourseController@index');
 Route::get('{id}/delete','Admin\CourseController@delete' );
 
 Route::get('/courses', 'User\CourseController@index');
+Route::get('/{id}/delete','User\CourseController@delete');
+Route::post('/{id}/enroll','User\CourseController@store');
 

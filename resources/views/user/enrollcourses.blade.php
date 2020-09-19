@@ -8,16 +8,13 @@
         <tr>
           <th>Coursename</th>
           <th></th>
-          <th></th>
         </tr>
       </thead>
       <tbody>
         @foreach($courses as $course)
         <tr>
           <td>{{$course->name}}</td>
-          <td><form method="post" action="/{{$course->id}}/enroll">
-               @csrf
-              <a href='/{{$course->id}}/enroll'><button type="submit" class="btn btn-primary">Enroll</button></a></form></td>
+          <td><a href='/{{$course->id}}/delete'><button type="button" class="btn btn-primary">Delete</button></a></td>
         </tr>
         @endforeach
       </tbody>
